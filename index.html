@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primo Spettacolo</title>
+<meta name="description" content="Primo Spettacolo – restaurant italien à Uccle, Bruxelles. Pâtes maison, grillades, desserts maison. Rue Vanderkindere 138, 1180 Uccle. +32 2 346 36 09.">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Primo Spettacolo","servesCuisine":"Italian","priceRange":"€€","acceptsReservations":true,"telephone":"+3223463609",
+"address":{"@type":"PostalAddress","streetAddress":"Rue Vanderkindere 138","postalCode":"1180","addressLocality":"Uccle","addressRegion":"Brussels","addressCountry":"BE"},
+"openingHoursSpecification":[
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"12:00","closes":"14:30"},
+{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday","Saturday"],"opens":"18:30","closes":"21:30"}]}
+</script>
+<style>
+:root{
+  /* Layout idea: every section is a rounded butter-yellow card on bright yellow; photos fill their card half; marigold tint marks menu & hours */
+  --bg:#fae39d;
+  --card:#fff0be;
+  --ink:#16120f;
+  --ink-soft:#5b5047;
+  --accent:#9e2b1f;
+  --marigold:#f7d672;
+  --line:rgba(90,60,10,.16);
+  --r:28px;
+  --shadow:0 2px 6px rgba(140,95,10,.08), 0 18px 48px -22px rgba(140,95,10,.38);
+  --display:"Instrument Serif", "Times New Roman", serif;
+  --body:"Manrope", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:100px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html[lang="fr"] .en, html[lang="en"] .fr{display:none !important}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:.98;letter-spacing:-.015em;text-wrap:balance;margin:0}
+h1{font-size:clamp(4rem,11vw,9.6rem)}
+h2{font-size:clamp(3.2rem,8.5vw,8rem)}
+h3{font-size:clamp(2rem,3.4vw,2.6rem)}
+h1 em,h2 em{color:var(--accent)}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1560px;margin:0 auto;padding:0 clamp(14px,2.4vw,32px)}
+.kicker{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--accent)}
+.lead{color:var(--ink-soft);max-width:58ch}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:16px 28px;font:700 1rem var(--body);text-decoration:none;cursor:pointer;white-space:nowrap;transition:transform .2s, background .2s}
+.btn:hover{background:#7f2017;transform:translateY(-1px)}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn.line:hover{background:rgba(0,0,0,.04)}
+.on-photo .btn.line:hover{background:rgba(255,255,255,.1)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+
+/* sections & containers */
+.band{padding:22px 0}
+.band.gold{background:var(--marigold)}
+.band.first{padding-top:22px}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:clamp(28px,4.5vw,64px)}
+.photo{position:relative;border-radius:var(--r);overflow:hidden;background:#f3d98a;min-height:420px}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.photo svg,.photo canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:stretch}
+.split .txt{display:grid;gap:24px;align-content:center}
+@media (max-width:900px){.split{grid-template-columns:1fr}.split .photo{min-height:320px;order:-1}}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(250,227,157,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:28px;height:80px}
+.logo{font-family:var(--display);font-size:2rem;text-decoration:none;white-space:nowrap;line-height:1}
+.logo em{color:var(--accent)}
+.links{display:flex;gap:28px;margin-left:auto;font-size:1rem;font-weight:700}
+.links a{text-decoration:none;color:var(--ink-soft);padding:6px 0;border-bottom:2px solid transparent}
+.links a:hover{color:var(--ink)}
+.links a.active{color:var(--ink);border-bottom-color:var(--accent)}
+.lang{display:flex;gap:2px;font-size:.85rem;font-weight:800}
+.lang button{background:none;border:0;color:var(--ink);opacity:.4;cursor:pointer;padding:6px 7px;font:inherit}
+.lang button[aria-pressed="true"]{opacity:1}
+.nav .btn{padding:12px 22px}
+.menu-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;margin-left:auto}
+.menu-toggle span{display:block;width:26px;height:2px;background:var(--ink);margin:6px 0}
+@media (max-width:980px){
+  .links{position:fixed;inset:80px 0 auto 0;background:var(--bg);flex-direction:column;gap:0;padding:8px 24px 24px;display:none;box-shadow:var(--shadow)}
+  .links.open{display:flex}
+  .links a{padding:16px 0;border-bottom:1px solid var(--line);font-size:1.2rem}
+  .menu-toggle{display:block}
+  .nav .btn{display:none}
+  .lang{order:3}
+}
+
+/* views */
+.view{display:none}
+.view.on{display:block}
+
+/* hero */
+.hero{position:relative;height:min(66vh,620px);min-height:500px;border-radius:var(--r);overflow:hidden;background:#0d0a08;color:#fff;box-shadow:var(--shadow)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease}
+.slide.on{opacity:1}
+.slide canvas,.slide img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;transform:scale(1);transition:transform 7s linear}
+.slide.on canvas,.slide.on img{transform:none}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,8,6,.82) 0%,rgba(10,8,6,.42) 45%,rgba(10,8,6,0) 72%),linear-gradient(0deg,rgba(10,8,6,.55),rgba(10,8,6,0) 38%);pointer-events:none}
+.hero-txt{position:absolute;z-index:2;left:clamp(24px,5vw,72px);right:clamp(24px,5vw,72px);bottom:clamp(36px,8vh,80px)}
+.hero h1{font-size:clamp(3rem,6.6vw,6.2rem)}
+.hero-hello{font-family:var(--display);font-style:italic;font-size:clamp(1.6rem,2.4vw,2.2rem);color:#ffc46b;margin-bottom:6px}
+.hero h1 em{color:#ffc46b}
+.hero-txt .lead{color:rgba(255,255,255,.85);margin:24px 0 34px;font-size:1.15rem}
+.hero-txt .cta{display:flex;gap:12px;flex-wrap:wrap}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:1rem;font-weight:700;color:#fff;background:rgba(20,10,6,.72);backdrop-filter:blur(8px);padding:11px 20px;border-radius:999px;margin-bottom:24px;box-shadow:0 6px 20px -8px rgba(0,0,0,.5)}
+.dot{width:9px;height:9px;border-radius:50%;background:#999}
+.dot.open{background:#7bd88f;box-shadow:0 0 0 4px rgba(123,216,143,.22)}
+.dot.closed{background:var(--accent)}
+.slide-ui{position:absolute;z-index:3;right:clamp(24px,5vw,72px);bottom:clamp(36px,8vh,80px);display:grid;gap:14px;justify-items:end;text-align:right;max-width:320px}
+.slide-cap{font-family:var(--display);font-size:2rem;line-height:1.05}
+.slide-sub{font-size:.95rem;color:rgba(255,255,255,.75)}
+.bars{display:flex;gap:8px}
+.bars button{width:50px;height:4px;border:0;padding:0;background:rgba(255,255,255,.28);cursor:pointer;position:relative;overflow:hidden;border-radius:2px}
+.bars button i{position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left}
+.bars button.on i{animation:fill 6s linear forwards}
+.bars button.done i{transform:scaleX(1)}
+@keyframes fill{to{transform:scaleX(1)}}
+@media (max-width:760px){
+  .hero{height:auto;min-height:620px}
+  .hero::after{background:linear-gradient(0deg,rgba(10,8,6,.92) 0%,rgba(10,8,6,.55) 55%,rgba(10,8,6,.1) 85%)}
+  .slide-ui{top:28px;bottom:auto}
+  .slide-cap{font-size:1.4rem}
+}
+
+/* home */
+.course .photo{min-height:min(52vh,480px)}
+.course{grid-template-columns:1fr 1fr;align-items:center}
+.course .photo{height:min(52vh,480px)}
+/* living photos: scroll slide + slow drift + warm glow */
+.hs-card{padding:clamp(28px,4vw,52px) 0;overflow:hidden}
+.hs-head{padding:0 clamp(28px,4.5vw,64px) clamp(18px,2.5vw,32px);display:grid;gap:14px}
+.hs-view{overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.hs-view::-webkit-scrollbar{display:none}
+.hs-track{display:flex;gap:clamp(18px,2.2vw,32px);width:max-content;padding:0 clamp(28px,4.5vw,64px) 90px;align-items:flex-start;will-change:transform}
+.hs-tile{margin:0;flex:0 0 auto;transform:translateY(var(--off));display:grid;gap:12px}
+.hs-tile .photo{min-height:0;height:min(40vh,390px);aspect-ratio:3/4}
+.hs-tile:nth-child(3n+2) .photo{aspect-ratio:4/5}
+.hs-tile:nth-child(4n+3) .photo{aspect-ratio:1/1.05;height:min(34vh,330px)}
+.hs-tile figcaption{font-family:var(--display);font-size:1.5rem;line-height:1.1}
+.hs.pinned .hs-pin{position:sticky;top:84px}
+.hs.pinned .hs-view{overflow:visible}
+.photo.cycle img{opacity:0;transform:scale(1.08);transition:opacity 1.8s ease, transform 6s cubic-bezier(.16,1,.3,1)}
+.photo.cycle img.on{opacity:1;transform:scale(1)}
+.photo.live .pz{position:absolute;left:0;right:0;top:-18%;bottom:-18%;transform:translate3d(0,var(--py,0px),0);will-change:transform}
+.photo.live .pz img{animation:drift 10s ease-in-out infinite alternate;transform-origin:50% 60%}
+@keyframes drift{0%{transform:scale(1.05) translate(0,0)}100%{transform:scale(1.17) translate(-2.2%,-1.8%)}}
+.photo.live .glow{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(60% 55% at 30% 25%,rgba(255,200,110,.55),rgba(255,170,60,0) 70%),radial-gradient(45% 40% at 80% 85%,rgba(255,140,60,.28),rgba(255,140,60,0) 70%);
+  animation:glow 7s ease-in-out infinite alternate}
+@keyframes glow{0%{opacity:.45;transform:translate(-3%,-2%)}100%{opacity:.95;transform:translate(3%,2%)}}
+.photo.live::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 90px rgba(120,60,0,.28);border-radius:inherit}
+.course-n{font-family:var(--display);font-size:clamp(4rem,7vw,6.5rem);line-height:.8;color:var(--accent);opacity:.9}
+@media (max-width:900px){.course .photo{min-height:360px}}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px)}
+.pillars article{display:grid;gap:14px;align-content:start}
+.pillars .n{font-family:var(--display);font-size:4rem;color:var(--accent);line-height:1}
+@media (max-width:900px){.pillars{grid-template-columns:1fr}}
+.today-card{background:var(--marigold);border-radius:var(--r);padding:clamp(26px,3.5vw,44px);display:grid;gap:18px;align-content:center}
+.today-card .big{font-family:var(--display);font-size:clamp(1.9rem,2.6vw,2.6rem);line-height:1.1}
+.teasers{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.teaser{display:grid;align-content:space-between;gap:48px;min-height:280px;text-decoration:none;transition:transform .25s, box-shadow .25s}
+.teaser:hover{transform:translateY(-4px)}
+.teaser .go{font-weight:800;color:var(--accent)}
+@media (max-width:900px){.teasers{grid-template-columns:1fr}}
+
+/* page title card */
+.title-card{display:grid;gap:20px}
+
+/* menu */
+.menu-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,3.5vw,56px);align-items:start}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,3vw,44px)}
+.menu-group{margin-bottom:40px}
+.menu-group h3{padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:6px}
+.dish{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:2px 16px;align-items:baseline}
+.dish h4{margin:0;font-family:var(--body);font-weight:700;font-size:22px;line-height:1.25}
+.dish .price{font-weight:800;font-size:22px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dish p{grid-column:1/-1;color:var(--ink-soft);font-size:17px}
+.tag{font:800 .62rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:#3f5a1f;background:#eadf9c;border-radius:999px;padding:3px 8px;margin-left:8px;vertical-align:middle}
+.chap-card{padding:clamp(40px,6vw,96px) clamp(24px,6vw,110px)}
+.chap-intro{text-align:center;display:grid;justify-items:center;gap:14px;margin-bottom:clamp(32px,4.5vw,60px)}
+.chap-n{font-family:var(--display);font-size:1.4rem;letter-spacing:.3em;color:var(--accent)}
+.chap-intro h2{font-size:clamp(3rem,6vw,5.6rem)}
+.chap-line{font-family:var(--display);font-style:italic;font-size:clamp(1.3rem,2vw,1.7rem);color:var(--ink-soft);max-width:36ch}
+.chap-banner{min-height:0;height:clamp(200px,30vh,340px);margin:0 auto clamp(40px,5vw,72px);max-width:980px}
+.chap-banner .pz img{transition:opacity 2.2s ease}
+.dlist{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,2.6vw,36px) clamp(36px,5vw,80px);max-width:1180px;margin:0 auto}
+article.ditem.dish{display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:center;padding:10px;margin:0 -10px;border:0;border-radius:20px;cursor:pointer;transition:background .5s ease}
+article.ditem.dish:hover,article.ditem.dish:focus-visible{background:rgba(247,214,114,.45)}
+.ditem .thumb{width:76px;height:76px;border-radius:50%;object-fit:cover;margin:0;box-shadow:0 8px 20px -10px rgba(94,26,18,.55);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.ditem:hover .thumb{transform:scale(1.08) rotate(-3deg)}
+.di-body{display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:baseline}
+.di-body h4{margin:0;font-family:var(--display);font-weight:400;font-size:1.75rem;line-height:1.1}
+.di-body .price{font-weight:800;font-size:22px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.di-body p{grid-column:1/-1;color:var(--ink-soft);font-size:16px;letter-spacing:.01em}
+.hover-prev{position:fixed;left:0;top:0;z-index:40;width:260px;aspect-ratio:4/3;border-radius:22px;overflow:hidden;pointer-events:none;opacity:0;scale:.85;transition:opacity .45s ease, scale .6s cubic-bezier(.16,1,.3,1);box-shadow:0 30px 60px -25px rgba(60,20,5,.55)}
+.hover-prev.on{opacity:1;scale:1}
+.hover-prev img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.dlist{grid-template-columns:1fr}.chap-card{padding:36px 20px}}
+.chapnav{position:sticky;top:80px;z-index:20;background:rgba(250,227,157,.94);backdrop-filter:blur(10px);padding:10px 0}
+.chapnav-in{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.chapnav-in::-webkit-scrollbar{display:none}
+.chapnav a{flex:0 0 auto;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.92rem;padding:9px 16px;border-radius:999px;background:var(--card);color:var(--ink-soft);transition:background .4s, color .4s}
+.chapnav a .cn{font-family:var(--display);font-size:1.15rem;color:var(--accent);font-weight:400}
+.chapnav a.on{background:var(--accent);color:#fff1c9}
+.chapnav a.on .cn{color:#ffc46b}
+.chapter{scroll-margin-top:150px}
+.chap-head{margin-bottom:clamp(28px,4vw,52px)}
+.chap-head .photo{min-height:min(46vh,420px)}
+.chap-txt{align-content:center}
+.chap-txt h2{font-size:clamp(3.2rem,7vw,6.4rem)}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.2vw,30px)}
+article.dcard.dish{display:grid;grid-template-columns:1fr;gap:0;padding:0;margin:0;border:0;border-radius:var(--r);background:#fbe6a4;overflow:hidden;transition:transform .7s cubic-bezier(.16,1,.3,1), box-shadow .7s}
+article.dcard.dish:hover,.dcard.dish:focus-visible{transform:translateY(-6px);box-shadow:var(--shadow);background:#fbe6a4}
+.dc-img{aspect-ratio:4/3;overflow:hidden}
+.dc-img .thumb{width:100%;height:100%;border-radius:0;margin:0;object-fit:cover;box-shadow:none;transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+article.dcard.dish:hover .thumb{transform:scale(1.08)}
+.dc-body{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:baseline;padding:18px 22px 22px}
+.dc-body p{grid-column:1/-1;color:var(--ink-soft);font-size:17px}
+@media (max-width:1100px){.dgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.dgrid{grid-template-columns:1fr}}
+.dish.has-photo{cursor:pointer;border-radius:16px;margin:0 -12px;padding:16px 12px;transition:background .5s ease}
+.dish.has-photo:hover,.dish.has-photo:focus-visible{background:rgba(247,214,114,.55)}
+.dish h4{display:flex;align-items:center;flex-wrap:wrap;gap:0}
+.thumb{width:44px;height:44px;border-radius:50%;object-fit:cover;margin-right:14px;box-shadow:0 4px 14px -6px rgba(94,26,18,.6);transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.dish.has-photo:hover .thumb{transform:scale(1.12)}
+/* dish view */
+.dv{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:clamp(14px,4vw,56px)}
+.dv[hidden]{display:none}
+.dv-bg{position:absolute;inset:0;background:rgba(58,14,9,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.dv-card{position:relative;margin:0;width:min(1240px,100%);max-height:100%;display:grid;grid-template-columns:1.35fr 1fr;background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 40px 120px -30px rgba(30,6,3,.7)}
+.dv-img{position:relative;min-height:min(78vh,720px);overflow:hidden;background:#f3d98a}
+.dv-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dv-txt{display:grid;gap:18px;align-content:center;padding:clamp(28px,4vw,64px)}
+.dv-txt h3{font-size:clamp(2.6rem,4.6vw,4.6rem);line-height:1}
+.dv-txt .price{font-size:1.6rem;font-weight:800;color:var(--accent)}
+.dv-close{position:absolute;top:18px;right:18px;z-index:2;width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,240,200,.92);color:var(--ink);font-size:1.6rem;line-height:1;cursor:pointer}
+.dv-line{display:block}
+@media (max-width:860px){.dv-card{grid-template-columns:1fr;overflow:auto}.dv-img{min-height:52vh}}
+.menu-photo{position:sticky;top:104px;height:calc(100vh - 128px);min-height:520px}
+.menu-photo .cap{position:absolute;left:24px;bottom:24px;z-index:2;color:#fff;font-family:var(--display);font-size:2rem;line-height:1.05;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.menu-photo .cap small{display:block;font-family:var(--body);font-size:.85rem;opacity:.85;margin-top:6px}
+.menu-note{margin-top:8px;color:var(--ink-soft);font-size:17px}
+@media (max-width:1180px){
+  .menu-layout{grid-template-columns:1fr}
+  .menu-photo{position:relative;top:0;height:60vh;min-height:380px;order:-1}
+}
+@media (max-width:700px){.menu-cols{grid-template-columns:1fr}}
+
+/* booking */
+.resa{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{display:grid;gap:8px}
+.field.full{grid-column:1/-1}
+label{font-size:.85rem;font-weight:800;letter-spacing:.02em}
+input,select,textarea{font:inherit;font-size:1.05rem;padding:15px 16px;border:1px solid var(--line);border-radius:14px;background:#fbe8ad;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
+textarea{min-height:110px;resize:vertical}
+.err{color:var(--accent);font-size:.95rem;min-height:1.2em;grid-column:1/-1;font-weight:700}
+.ok{grid-column:1/-1;background:var(--marigold);border-radius:16px;padding:22px;display:none}
+.ok.show{display:block}
+@media (max-width:900px){.resa{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:12px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{font-weight:800;color:var(--accent)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(28px,4vw,56px)}
+.contact .big{font-family:var(--display);font-size:clamp(2rem,3vw,2.6rem);line-height:1.1;margin-top:12px}
+.map{background:#f4d37a;display:grid;place-items:center;color:#fff;min-height:440px}
+.pin{position:relative;z-index:1;display:grid;justify-items:center;gap:12px;text-align:center;background:rgba(94,26,18,.92);color:#fff1c9;backdrop-filter:blur(4px);padding:26px 32px;border-radius:20px}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+
+footer{padding:22px 0 28px}
+.foot-card{background:#5e1a12;color:rgba(255,240,200,.8);border-radius:var(--r);padding:clamp(28px,4.5vw,64px);font-size:1rem}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+.foot .logo{color:#fff1c9;font-size:2.6rem}
+.foot h5{color:#fff1c9;margin:0 0 12px;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase}
+.foot a{text-decoration:none}
+.foot a:hover{color:#ffd77a}
+.legal{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;color:rgba(255,255,255,.5);font-size:.85rem}
+@media (max-width:760px){.foot{grid-template-columns:1fr}}
+
+/* scroll reveal */
+.js .rv{opacity:0;transform:translateY(28px)}
+.js .rv-img{opacity:0;transform:translate(-150px,-70px) scale(1.12)}
+.js .rv-img[data-side="right"]{transform:translate(150px,-70px) scale(1.12)}
+.js .rv.in,.js .rv-img.in{opacity:1;transform:none;transition:opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1)}
+.js .rv-img.in{transition:opacity .9s ease, transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .still{transition:none !important}
+.menu-photo.rv-img.in{transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  .photo.live .pz img,.photo.live .glow{animation:none}
+  .photo.cycle img{transition:none;transform:none}
+  .photo.live .pz{transform:none}
+  .js .rv,.js .rv-img{opacity:1 !important;transform:none !important;transition:none !important}
+  .slide{transition:none}
+  .slide canvas,.slide.on canvas,.slide img,.slide.on img{transform:none;transition:none}
+  .bars button.on i{animation:none;transform:scaleX(1)}
+  .btn,.teaser{transition:none}
+}
+
+/* ---------- phone fixes ---------- */
+@media (max-width:900px){
+  .course{grid-template-columns:1fr !important}
+  .course .photo,.split .photo{order:-1;height:auto;min-height:0;aspect-ratio:4/3}
+  .course .txt,.split .txt{gap:16px}
+  .course-n{font-size:3.4rem}
+  h2{font-size:clamp(2.5rem,10vw,3.6rem)}
+  .card{padding:28px 22px}
+}
+@media (max-width:760px){
+  .hero{min-height:0;height:auto;display:flex;flex-direction:column;justify-content:flex-end}
+  .hero-txt{position:relative;left:auto;right:auto;bottom:auto;z-index:2;padding:110px 22px 30px}
+  .hero h1{font-size:clamp(2.6rem,12vw,3.4rem)}
+  .hero-txt .lead{font-size:1rem;margin:16px 0 22px}
+  .hero-txt .cta .btn{flex:1 1 auto;justify-content:center}
+  .slide-ui{display:none}
+  .status{position:absolute;top:18px;left:22px;margin:0;font-size:.85rem;padding:9px 15px}
+  .hero-hello{font-size:1.4rem}
+  body{font-size:17px}
+  .nav{height:68px;gap:14px}
+  .logo{font-size:1.6rem}
+  header .lang{margin-left:auto;order:2}
+  .menu-toggle{margin-left:4px;order:3}
+  .links{inset:68px 0 auto 0}
+  .chapnav{top:68px}
+  .chap-card{padding:30px 18px}
+  .chap-banner{height:200px;margin-bottom:28px}
+  article.ditem.dish{grid-template-columns:60px 1fr;gap:14px}
+  .ditem .thumb{width:60px;height:60px}
+  .di-body h4{font-size:1.4rem}
+  .di-body .price{font-size:18px}
+  .di-body p{font-size:15px}
+  .teasers{gap:16px}
+  .teaser{min-height:0;gap:28px}
+  .dv-card{max-height:92vh}
+  .dv-img{min-height:42vh}
+  .dv-txt{padding:24px}
+  .dv-txt h3{font-size:2.4rem}
+  .contact .big{font-size:1.8rem}
+  .map{min-height:340px}
+  .foot-card{padding:30px 22px}
+  input,select,textarea{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home">Primo <em>Spettacolo</em></a>
+    <nav class="links" id="links">
+      <a href="#home" data-route="home"><span class="fr">Accueil</span><span class="en">Home</span></a>
+      <a href="#menu" data-route="menu"><span class="fr">La carte</span><span class="en">Menu</span></a>
+      <a href="#story" data-route="story"><span class="fr">Notre histoire</span><span class="en">Our story</span></a>
+      <a href="#book" data-route="book"><span class="fr">Réserver</span><span class="en">Book</span></a>
+      <a href="#contact" data-route="contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button id="btnFr" aria-pressed="true">FR</button>
+      <button id="btnEn" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn" href="#book"><span class="fr">Réserver une table</span><span class="en">Book a table</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="links" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ===================== HOME ===================== -->
+<div class="view" id="v-home">
+  <section class="band first">
+    <div class="wrap">
+      <div class="hero on-photo">
+        <div class="slide on"><img src="images/hero-tuscany.jpg" alt="" style="object-position:50% 60%"></div>
+        <div class="hero-txt">
+          <div class="status"><span class="dot" id="statusDot"></span><span id="statusText"></span></div>
+          <p class="hero-hello">Benvenuti</p>
+          <h1><span class="fr">Prenez place,<br><em>l'Italie vous attend</em></span><span class="en">Take a seat,<br><em>Italy is waiting</em></span></h1>
+          <p class="lead"><span class="fr">Des pâtes pétries le matin, des plats qui mijotent tranquillement et un bon verre de vin. Une petite trattoria rue Vanderkindere, à Uccle, où l'on prend le temps.</span><span class="en">Pasta made in the morning, dishes that simmer slowly and a good glass of wine. A small trattoria on Rue Vanderkindere in Uccle, where nobody rushes.</span></p>
+          <div class="cta">
+            <a class="btn" href="#book"><span class="fr">Réserver une table</span><span class="en">Book a table</span> <span class="arr">→</span></a>
+            <a class="btn line" href="#menu"><span class="fr">Voir la carte</span><span class="en">See the menu</span></a>
+          </div>
+        </div>
+        <div class="slide-ui">
+          <p class="slide-cap" id="slideCap"></p>
+          <p class="slide-sub" id="slideSub"></p>
+          <div class="bars" id="bars"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="card title-card rv" style="text-align:center;justify-items:center">
+        <p class="kicker"><span class="fr">Le voyage</span><span class="en">The journey</span></p>
+        <h2><span class="fr">Quatre temps, <em>une soirée</em></span><span class="en">Four courses, <em>one evening</em></span></h2>
+        <p class="lead"><span class="fr">À l'italienne, un repas se vit comme une histoire. Laissez-vous guider, plat après plat.</span><span class="en">In Italy, a meal unfolds like a story. Let us guide you, one course at a time.</span></p>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <div class="card split course rv">
+        <div class="photo live rv-img" data-side="left"><div class="pz"><img src="images/antipasti.jpg" alt="" data-alt-fr="Une planche d'antipasti partagée entre amis" data-alt-en="A platter of antipasti shared between friends" style="object-position:40% 100%" loading="lazy"></div><div class="glow"></div></div>
+        <div class="txt">
+          <p class="course-n">I</p>
+          <p class="kicker">Antipasto</p>
+          <h2><span class="fr">Pour ouvrir l'appétit</span><span class="en">To open the appetite</span></h2>
+          <p class="lead"><span class="fr">Bruschetta, charcuterie italienne, mozzarella et légumes grillés : une grande planche à partager autour d'un premier verre.</span><span class="en">Bruschetta, Italian cured meats, mozzarella and grilled vegetables: a big board to share over a first glass.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <div class="card split course rv">
+        <div class="txt">
+          <p class="course-n">II</p>
+          <p class="kicker">Primo</p>
+          <h2><span class="fr">Le cœur de la maison</span><span class="en">The heart of the house</span></h2>
+          <p class="lead"><span class="fr">Nos pâtes sont pétries chaque matin : carbonara, ragù mijoté, ravioli à la sauge. Le plat que l'on vient chercher chez nous.</span><span class="en">Our pasta is made every morning: carbonara, slow-cooked ragù, ravioli with sage. The dish people come back for.</span></p>
+        </div>
+        <div class="photo live rv-img" data-side="right"><div class="pz"><img src="images/pasta-fresca.jpg" alt="" data-alt-fr="Pâte fraîche passée au laminoir, tagliatelle et fusilli maison" data-alt-en="Fresh pasta dough through the roller, homemade tagliatelle and fusilli" style="object-position:50% 60%" loading="lazy"></div><div class="glow"></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <div class="card split course rv">
+        <div class="photo live cycle rv-img" data-side="left"><div class="pz">
+          <img class="on" src="images/lasagne.jpg" alt="" data-alt-fr="Lasagne de la maison sortie du four" data-alt-en="Our house lasagne, fresh from the oven" loading="lazy">
+          <img src="images/spaghetti-pomodoro.jpg" alt="" data-alt-fr="Spaghetti à la tomate, mozzarella et basilic" data-alt-en="Spaghetti with tomato, mozzarella and basil" style="object-position:50% 55%" loading="lazy">
+          <img src="images/spaghetti-pollo.jpg" alt="" data-alt-fr="Spaghetti au poulet et à la crème" data-alt-en="Spaghetti with chicken and cream" loading="lazy">
+          <img src="images/carbonara.jpg" alt="" data-alt-fr="Spaghetti carbonara maison" data-alt-en="Homemade spaghetti carbonara" loading="lazy">
+        </div><div class="glow"></div></div>
+        <div class="txt">
+          <p class="course-n">III</p>
+          <p class="kicker">Secondo</p>
+          <h2><span class="fr">Du four et de la braise</span><span class="en">From the oven and the grill</span></h2>
+          <p class="lead"><span class="fr">Lasagne gratinée, parmigiana, escalopes et pièces de bœuf grillées : des plats généreux, cuits avec patience.</span><span class="en">Baked lasagne, parmigiana, escalopes and grilled beef: generous dishes, cooked with patience.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <div class="card split course rv">
+        <div class="txt">
+          <p class="course-n">IV</p>
+          <p class="kicker">Dolce</p>
+          <h2><span class="fr">Pour finir en douceur</span><span class="en">To end on a sweet note</span></h2>
+          <p class="lead"><span class="fr">Tiramisù, mousse au chocolat et un dernier espresso. On ne vous presse jamais : la table est à vous.</span><span class="en">Tiramisù, chocolate mousse and a last espresso. Nobody rushes you here: the table is yours.</span></p>
+        </div>
+        <div class="photo live cycle rv-img" data-side="right"><div class="pz">
+          <img class="on" src="images/dolce-tiramisu.jpg" alt="" data-alt-fr="Dessert au cacao, crème et sauce chocolat" data-alt-en="Cocoa dessert with cream and chocolate sauce" loading="lazy">
+          <img src="images/dolce-mousse.jpg" alt="" data-alt-fr="Mousse au chocolat, framboises et mûre" data-alt-en="Chocolate mousse with raspberries and blackberry" style="object-position:50% 45%" loading="lazy">
+        </div><div class="glow"></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="band gold">
+    <div class="wrap">
+      <div class="card split course rv">
+        <div class="photo live cycle rv-img" data-side="left"><div class="pz">
+          <img class="on" src="images/courtyard.jpg" alt="" data-alt-fr="Une table pour deux sous les feuilles de la cour" data-alt-en="A table for two under the leaves of the courtyard" style="object-position:50% 60%" loading="lazy">
+          <img src="images/evening.jpg" alt="" data-alt-fr="La terrasse le soir, sous les guirlandes lumineuses" data-alt-en="The terrace in the evening, under string lights" style="object-position:50% 55%" loading="lazy">
+        </div><div class="glow"></div></div>
+        <div class="txt">
+          <p class="kicker"><span class="fr">La terrasse</span><span class="en">The terrace</span></p>
+          <h2><span class="fr">Une table <em>sous les feuilles</em></span><span class="en">A table <em>under the leaves</em></span></h2>
+          <p class="lead"><span class="fr">Derrière la salle se cache une cour verdoyante, à l'abri de la rue. Aux beaux jours, on y déjeune à l'ombre des feuillages et l'on dîne sous les guirlandes lumineuses.</span><span class="en">Behind the dining room is a leafy courtyard, hidden from the street. On sunny days, lunch is served in the shade of the leaves, and dinner under the string lights.</span></p>
+          <p><a class="btn" href="#book"><span class="fr">Réserver en terrasse</span><span class="en">Book on the terrace</span> <span class="arr">→</span></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="card rv" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+        <h3><span class="fr">Prêt pour le voyage ?</span><span class="en">Ready for the journey?</span></h3>
+        <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#book"><span class="fr">Réserver une table</span><span class="en">Book a table</span> <span class="arr">→</span></a><a class="btn line" href="#menu"><span class="fr">Voir la carte</span><span class="en">See the menu</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band gold">
+    <div class="wrap">
+      <div class="card split rv">
+        <div class="txt">
+          <p class="kicker"><span class="fr">Venez nous voir</span><span class="en">Come and see us</span></p>
+          <h2><span class="fr">Une trattoria <em>de quartier</em></span><span class="en">A neighbourhood <em>trattoria</em></span></h2>
+          <p class="lead"><span class="fr">Pour un déjeuner, un dîner à deux ou une soirée entre amis. Comptez environ 20 à 30 € par personne.</span><span class="en">For lunch, a dinner for two or an evening with friends. Expect around €20–30 per person.</span></p>
+        </div>
+        <div class="today-card">
+          <p class="kicker" id="todayLabel"></p>
+          <p class="big" id="todayHours"></p>
+          <table class="hours" data-hours aria-label="Horaires / Opening hours"></table>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+            <a class="btn" href="#book"><span class="fr">Réserver</span><span class="en">Book</span></a>
+            <a class="btn line" href="#contact"><span class="fr">Accès</span><span class="en">Directions</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap teasers">
+      <a class="card teaser rv" href="#book">
+        <div style="display:grid;gap:12px"><p class="kicker"><span class="fr">Réserver</span><span class="en">Book</span></p><h3><span class="fr">Votre table en deux minutes</span><span class="en">Your table in two minutes</span></h3></div>
+        <span class="go"><span class="fr">Réserver une table →</span><span class="en">Book a table →</span></span>
+      </a>
+      <a class="card teaser rv" href="#story">
+        <div style="display:grid;gap:12px"><p class="kicker"><span class="fr">Notre histoire</span><span class="en">Our story</span></p><h3><span class="fr">Des recettes de famille, sans chichis</span><span class="en">Family recipes, no fuss</span></h3></div>
+        <span class="go"><span class="fr">Lire notre histoire →</span><span class="en">Read our story →</span></span>
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== MENU ===================== -->
+<div class="view" id="v-menu">
+  <section class="band first">
+    <div class="wrap">
+      <div class="card title-card rv">
+        <p class="kicker"><span class="fr">La carte</span><span class="en">The menu</span></p>
+        <h1><span class="fr">Ce qui sort <em>de la cuisine</em></span><span class="en">What comes out <em>of the kitchen</em></span></h1>
+        <p class="lead"><span class="fr">Cuisine italienne, avec quelques classiques à la française. Environ 20 à 30 € par personne. Plats aussi à emporter : +32 2 346 36 09.</span><span class="en">Italian cooking, with a few French classics. Around €20–30 per person. Takeaway too: +32 2 346 36 09.</span></p>
+      </div>
+    </div>
+  </section>
+  <nav class="chapnav" id="chapNav" aria-label="Chapitres"></nav>
+  <div id="menuJourney"></div>
+  <section class="band">
+    <div class="wrap">
+      <div class="card rv" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+        <p class="lead" style="max-width:none"><span class="fr">Suggestions du jour et liste des allergènes sur demande. Plats aussi à emporter.</span><span class="en">Daily specials and allergen list on request. Takeaway available.</span></p>
+        <a class="btn" href="#book"><span class="fr">Réserver une table</span><span class="en">Book a table</span> <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== STORY ===================== -->
+<div class="view" id="v-story">
+  <section class="band first">
+    <div class="wrap">
+      <div class="card title-card rv">
+        <p class="kicker"><span class="fr">Notre histoire</span><span class="en">Our story</span></p>
+        <h1><span class="fr">Une petite trattoria, <em>une grande passion</em></span><span class="en">A small trattoria, <em>a big heart</em></span></h1>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <div class="card split rv">
+        <div class="photo rv-img" data-side="left"><img src="images/tagliatelle.jpg" alt="" data-alt-fr="Tagliatelle fraîches maison" data-alt-en="Fresh homemade tagliatelle" loading="lazy"></div>
+        <div class="txt">
+          <p class="kicker"><span class="fr">Fait maison</span><span class="en">Made in-house</span></p>
+          <h2><span class="fr">Des recettes <em>de famille</em></span><span class="en">Family <em>recipes</em></span></h2>
+          <p class="lead"><span class="fr">Rue Vanderkindere, Primo Spettacolo accueille depuis des années les habitants d'Uccle et d'ailleurs autour d'une cuisine italienne sincère : des produits frais, sans chichis.</span><span class="en">On Rue Vanderkindere, Primo Spettacolo has welcomed neighbours from Uccle and beyond for years with honest Italian cooking: fresh ingredients, no fuss.</span></p>
+          <p class="lead"><span class="fr">Ici, tout est fait maison : les pâtes, les sauces, la parmigiana, les desserts. Le service est simple et chaleureux, et l'on prend le temps. Pour accompagner le tout, une belle carte de vins, des cocktails et des bières.</span><span class="en">Everything here is made in-house: the pasta, the sauces, the parmigiana, the desserts. Service is relaxed and friendly, and nobody rushes you. To go with it all, a generous wine list, cocktails and beers.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== BOOK ===================== -->
+<div class="view" id="v-book">
+  <section class="band first">
+    <div class="wrap">
+      <div class="card title-card rv">
+        <p class="kicker"><span class="fr">Réservations</span><span class="en">Reservations</span></p>
+        <h1><span class="fr">Réservez <em>votre table</em></span><span class="en">Book <em>your table</em></span></h1>
+      </div>
+    </div>
+  </section>
+  <section class="band gold">
+    <div class="wrap">
+      <div class="card resa rv">
+        <div style="display:grid;gap:24px;align-content:start">
+          <p class="lead"><span class="fr">Vous préférez appeler ? Nous sommes joignables pendant les heures d'ouverture au</span><span class="en">Prefer to call? Reach us during opening hours at</span> <a href="tel:+3223463609"><strong>+32 2 346 36 09</strong></a>.</p>
+          <div class="today-card">
+            <p class="kicker"><span class="fr">Horaires</span><span class="en">Opening hours</span></p>
+            <table class="hours" data-hours aria-label="Horaires / Opening hours"></table>
+          </div>
+        </div>
+        <form id="bookForm" novalidate>
+          <div class="field full"><label for="f-name"><span class="fr">Nom</span><span class="en">Name</span></label><input id="f-name" required autocomplete="name"></div>
+          <div class="field full"><label for="f-phone"><span class="fr">Téléphone</span><span class="en">Phone</span></label><input id="f-phone" type="tel" required autocomplete="tel"></div>
+          <div class="field"><label for="f-date">Date</label><input id="f-date" type="date" required></div>
+          <div class="field"><label for="f-time"><span class="fr">Heure</span><span class="en">Time</span></label><select id="f-time" required></select></div>
+          <div class="field full"><label for="f-guests"><span class="fr">Personnes</span><span class="en">Guests</span></label><select id="f-guests"></select></div>
+          <p class="err" id="formErr" role="alert"></p>
+          <div class="field full"><button class="btn" type="submit" style="justify-self:start"><span class="fr">Réserver</span><span class="en">Book</span> <span class="arr">→</span></button></div>
+          <div class="ok" id="formOk" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== CONTACT ===================== -->
+<div class="view" id="v-contact">
+  <section class="band first">
+    <div class="wrap">
+      <div class="card title-card rv">
+        <p class="kicker">Contact</p>
+        <h1><span class="fr">Nous <em>trouver</em></span><span class="en">Find <em>us</em></span></h1>
+      </div>
+    </div>
+  </section>
+  <section class="band gold">
+    <div class="wrap">
+      <div class="card contact rv">
+        <div><p class="kicker"><span class="fr">Adresse</span><span class="en">Address</span></p><p class="big">Rue Vanderkindere 138<br>1180 Uccle</p><p class="lead" style="margin-top:10px"><span class="fr">Quartier Vanderkindere – Churchill, près de Brugmann.</span><span class="en">Vanderkindere – Churchill area, near Brugmann.</span></p></div>
+        <div><p class="kicker"><span class="fr">Téléphone</span><span class="en">Phone</span></p><p class="big"><a href="tel:+3223463609" style="text-decoration:none">+32 2 346 36 09</a></p><p class="lead" style="margin-top:10px"><span class="fr">Réservations et plats à emporter. Visa, Mastercard, Amex, Diners.</span><span class="en">Bookings and takeaway. Visa, Mastercard, Amex, Diners.</span></p></div>
+        <div><p class="kicker"><span class="fr">Horaires</span><span class="en">Opening hours</span></p><table class="hours" data-hours style="margin-top:12px"></table></div>
+      </div>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <div class="photo map rv-img" data-side="left">
+        <svg viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g stroke="#fbe6a6" stroke-width="26" fill="none"><path d="M-20 300 L1220 190"/><path d="M500 -20 L580 460"/><path d="M880 -20 L930 460"/></g>
+          <g stroke="#f8dd8e" stroke-width="10" fill="none"><path d="M-20 100 L1220 50"/><path d="M200 -20 L260 460"/><path d="M-20 410 L1220 380"/></g>
+          <circle cx="600" cy="220" r="70" fill="#d4472c" opacity=".14"/><circle cx="600" cy="220" r="11" fill="#d4472c"/>
+        </svg>
+        <div class="pin on-photo">
+          <strong style="font-family:var(--display);font-size:2rem;font-weight:400">Primo Spettacolo</strong>
+          <span style="opacity:.85">Rue Vanderkindere 138, 1180 Uccle</span>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Primo+Spettacolo+Rue+Vanderkindere+138+1180+Uccle"><span class="fr">Itinéraire Google Maps</span><span class="en">Directions in Google Maps</span> <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<div class="dv" id="dishView" hidden role="dialog" aria-modal="true" aria-labelledby="dvName">
+  <div class="dv-bg" data-close></div>
+  <figure class="dv-card">
+    <button class="dv-close" data-close aria-label="Fermer / Close">×</button>
+    <div class="dv-img"><img id="dvImg" alt=""></div>
+    <figcaption class="dv-txt">
+      <p class="kicker dv-line" id="dvCat"></p>
+      <h3 class="dv-line" id="dvName"></h3>
+      <p class="lead dv-line" id="dvDesc"></p>
+      <p class="price dv-line" id="dvPrice"></p>
+      <p class="dv-line"><a class="btn" href="#book" data-close><span class="fr">Réserver une table</span><span class="en">Book a table</span> <span class="arr">→</span></a></p>
+    </figcaption>
+  </figure>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-card">
+      <div class="foot">
+        <div style="display:grid;gap:12px;align-content:start">
+          <a class="logo" href="#home">Primo <em style="color:#ffc46b">Spettacolo</em></a>
+          <p><span class="fr">Cuisine italienne faite maison à Uccle.</span><span class="en">Homemade Italian cooking in Uccle.</span></p>
+          <p>Rue Vanderkindere 138, 1180 Uccle<br><a href="tel:+3223463609">+32 2 346 36 09</a></p>
+        </div>
+        <div><h5><span class="fr">Horaires</span><span class="en">Hours</span></h5><p id="footHours"></p></div>
+        <div style="display:grid;gap:8px;align-content:start">
+          <h5>Pages</h5>
+          <a href="#menu"><span class="fr">La carte</span><span class="en">Menu</span></a>
+          <a href="#story"><span class="fr">Notre histoire</span><span class="en">Our story</span></a>
+          <a href="#book"><span class="fr">Réserver</span><span class="en">Book a table</span></a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span id="yr"></span> Primo Spettacolo · <span class="fr">TVA</span><span class="en">VAT</span> BE 0443.350.574</span>
+        <span><span class="fr">Mentions légales · Politique de confidentialité · Politique cookies</span><span class="en">Legal notice · Privacy policy · Cookie policy</span></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var lang='fr';
+  try{ lang=localStorage.getItem('ps-lang')||'fr'; }catch(e){}
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ROUTES=['home','menu','story','book','contact'];
+  var current='home';
+
+  /* ---------- Hours ---------- */
+  var LUNCH=['12:00','14:30'],DINNER=['18:30','21:30'];
+  var HOURS={0:[],1:[LUNCH,DINNER],2:[LUNCH,DINNER],3:[LUNCH],4:[LUNCH,DINNER],5:[LUNCH,DINNER],6:[LUNCH,DINNER]};
+  var DAYS={fr:['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']};
+  var T={
+    fr:{closed:'Fermé',openNow:'Ouvert · jusqu\'à ',closedNow:'Fermé',next:' · réouverture ',today:'aujourd\'hui',at:' à ',noSlot:'Fermé ce jour-là',pick:'Choisissez une date',guests:' personnes',one:' personne',big:'9 ou plus (groupe)',lunch:'Midi',dinner:'Soir',todayL:'Aujourd\'hui',closedToday:'Fermé aujourd\'hui'},
+    en:{closed:'Closed',openNow:'Open · until ',closedNow:'Closed',next:' · reopens ',today:'today',at:' at ',noSlot:'Closed that day',pick:'Pick a date first',guests:' guests',one:' guest',big:'9 or more (group)',lunch:'Lunch',dinner:'Dinner',todayL:'Today',closedToday:'Closed today'}
+  };
+  function fmt(t){ if(lang==='fr') return t.replace(':','h'); var p=t.split(':'),h=+p[0],ap=h>=12?'pm':'am'; h=h%12||12; return h+(p[1]==='00'?'':':'+p[1])+ap; }
+  function toMin(t){var p=t.split(':');return +p[0]*60+ +p[1];}
+  function brussels(){
+    var parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Brussels',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date()),o={};
+    parts.forEach(function(p){o[p.type]=p.value;});
+    return {day:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(o.weekday),mins:(+o.hour%24)*60+(+o.minute)};
+  }
+  function dayStr(d){ return HOURS[d].length?HOURS[d].map(function(r){return fmt(r[0])+' – '+fmt(r[1]);}).join(' · '):T[lang].closed; }
+  function renderHours(){
+    var now=brussels(),html='';
+    [1,2,3,4,5,6,0].forEach(function(d){ html+='<tr'+(d===now.day?' class="today"':'')+'><td>'+DAYS[lang][d]+'</td><td>'+dayStr(d)+'</td></tr>'; });
+    document.querySelectorAll('[data-hours]').forEach(function(t){t.innerHTML=html;});
+    document.getElementById('footHours').innerHTML=lang==='fr'
+      ?'Lun, mar, jeu–sam<br>12h00–14h30 · 18h30–21h30<br>Mer : 12h00–14h30<br>Dim : fermé'
+      :'Mon, Tue, Thu–Sat<br>12pm–2:30pm · 6:30pm–9:30pm<br>Wed: 12pm–2:30pm<br>Sun: closed';
+    document.getElementById('todayLabel').textContent=T[lang].todayL+' · '+DAYS[lang][now.day];
+    document.getElementById('todayHours').textContent=HOURS[now.day].length?dayStr(now.day):T[lang].closedToday;
+  }
+  function renderStatus(){
+    var now=brussels(),t=T[lang],dot=document.getElementById('statusDot'),txt=document.getElementById('statusText');
+    var cur=HOURS[now.day].find(function(r){return now.mins>=toMin(r[0])&&now.mins<toMin(r[1]);});
+    if(cur){dot.className='dot open';txt.textContent=t.openNow+fmt(cur[1]);return;}
+    dot.className='dot closed';
+    var later=HOURS[now.day].find(function(r){return toMin(r[0])>now.mins;});
+    if(later){txt.textContent=t.closedNow+t.next+t.today+t.at+fmt(later[0]);return;}
+    for(var i=1;i<=7;i++){var d=(now.day+i)%7;if(HOURS[d].length){txt.textContent=t.closedNow+t.next+DAYS[lang][d].toLowerCase()+t.at+fmt(HOURS[d][0][0]);return;}}
+  }
+
+  /* ---------- Menu ---------- */
+var MENU = [
+    {id:'antipasti',n:'I',fr:'Antipasti',en:'Starters',banner:'antipasti.jpg',pos:'40% 100%',lf:'Pour ouvrir l\'appétit, à partager autour d\'un premier verre.',le:'To open the appetite, shared over a first glass.',items:[
+      ['Bruschetta al pomodoro','Pain grillé, tomates, basilic, huile d\'olive','Grilled bread, tomatoes, basil, olive oil',1,'8,50','bruschetta'],
+      ['Burrata','Burrata crémeuse, roquette, tomates cerises','Creamy burrata, rocket, cherry tomatoes',1,'13,50','burrata'],
+      ['Carpaccio di manzo','Bœuf finement tranché, roquette, parmesan','Thinly sliced beef, rocket, parmesan',0,'14,00','carpaccio'],
+      ['Vitello tonnato','Veau, sauce au thon et câpres','Veal, tuna and caper sauce',0,'13,50','vitello'],
+      ['Antipasto misto','Bruschetta, charcuterie, mozzarella et légumes grillés (2 pers.)','Bruschetta, cured meats, mozzarella and grilled vegetables (for 2)',0,'19,00','antipasto-misto'],
+      ['Insalata Caesar','Romaine, croûtons, parmesan, sauce Caesar','Romaine, croutons, parmesan, Caesar dressing',0,'13,50','caesar']]},
+    {id:'pasta',n:'II',fr:'Pâtes maison',en:'Homemade pasta',banner:'pasta-fresca.jpg',pos:'50% 50%',lf:'Pétries chaque matin : le cœur de la maison.',le:'Made every morning: the heart of the house.',items:[
+      ['Tagliatelle al ragù','Ragù de bœuf mijoté lentement','Slow-cooked beef ragù',0,'15,50','ragu'],
+      ['Spaghetti carbonara','Guanciale, jaune d\'œuf, pecorino, poivre','Guanciale, egg yolk, pecorino, black pepper',0,'15,50','carbonara'],
+      ['Spaghetti alle polpette','Boulettes de viande maison, sauce tomate mijotée','Homemade meatballs, slow-cooked tomato sauce',0,'16,50','polpette'],
+      ['Spaghetti pollo e panna','Poulet, crème, parmesan, persil','Chicken, cream, parmesan, parsley',0,'16,50','pollo'],
+      ['Tagliatelle Alfredo','Pâtes fraîches, beurre, parmesan','Fresh pasta, butter, parmesan',1,'15,00','alfredo'],
+      ['Ravioli ricotta e spinaci','Beurre, sauge et parmesan','Butter, sage and parmesan',1,'16,50','ravioli'],
+      ['Penne all\'arrabbiata','Tomate, ail, piment','Tomato, garlic, chilli',1,'13,50','arrabbiata'],
+      ['Linguine alle vongole','Palourdes, ail, persil, vin blanc','Clams, garlic, parsley, white wine',0,'19,50','vongole'],
+      ['Lasagne della casa','La lasagne de la maison, gratinée au four','Our house lasagne, baked until golden',0,'16,00','lasagne']]},
+    {id:'pizze',n:'III',fr:'Pizze',en:'Pizzas',banner:'table.jpg',pos:'50% 76%',lf:'Une pâte qui a pris son temps, des garnitures simples.',le:'A dough given time to rest, simple toppings.',items:[
+      ['Margherita','Tomate, mozzarella, basilic','Tomato, mozzarella, basil',1,'12,00','margherita'],
+      ['Prosciutto e funghi','Tomate, mozzarella, jambon, champignons','Tomato, mozzarella, ham, mushrooms',0,'14,50','prosciutto'],
+      ['Quattro formaggi','Mozzarella, gorgonzola, parmesan, taleggio','Mozzarella, gorgonzola, parmesan, taleggio',1,'15,00','quattro'],
+      ['Diavola','Tomate, mozzarella, salami piquant','Tomato, mozzarella, spicy salami',0,'14,50','diavola'],
+      ['Primo Spettacolo','La pizza de la maison : demandez la garniture du moment','Our house pizza: ask about this month\'s topping',0,'16,00','pizza-casa']]},
+    {id:'secondi',n:'IV',fr:'Secondi & grill',en:'Mains & grill',banner:'lasagne.jpg',pos:'50% 45%',lf:'Du four et de la braise, des plats généreux.',le:'From the oven and the grill, generous dishes.',items:[
+      ['Parmigiana di melanzane','Aubergines, tomate, mozzarella, parmesan, gratinées','Aubergine, tomato, mozzarella, parmesan, baked',1,'17,00','parmigiana'],
+      ['Scaloppina al limone','Escalope de veau, sauce citron, pâtes ou légumes','Veal escalope, lemon sauce, pasta or vegetables',0,'21,50','scaloppina'],
+      ['Cotoletta alla milanese','Escalope panée, salade et frites','Breaded escalope with salad and fries',0,'20,50','cotoletta'],
+      ['Saltimbocca alla romana','Veau, jambon de Parme, sauge','Veal, Parma ham, sage',0,'22,50','saltimbocca'],
+      ['Tagliata di manzo','Bœuf grillé à la flamme, roquette, parmesan, romarin','Flame-grilled beef, rocket, parmesan, rosemary',0,'24,50','tagliata'],
+      ['Entrecôte alla brace','Entrecôte grillée, sauce au choix','Grilled rib-eye, choice of sauce',0,'26,00','entrecote'],
+      ['Escalope viennoise','Le schnitzel classique, citron et frites','The classic schnitzel, lemon and fries',0,'20,50','viennoise']]},
+    {id:'contorni',n:'V',fr:'Accompagnements',en:'Sides',banner:'antipasto.jpg',pos:'50% 60%',lf:'Pour accompagner, ou pour picorer.',le:'To go alongside, or to nibble.',items:[
+      ['Frites maison','Frites fraîches, fleur de sel','Fresh-cut fries, sea salt',1,'4,50','frites'],
+      ['Insalata mista','Salade verte, tomates, vinaigrette','Mixed salad, tomatoes, dressing',1,'5,00','insalata'],
+      ['Verdure grigliate','Légumes grillés à l\'huile d\'olive','Grilled vegetables, olive oil',1,'6,00','verdure'],
+      ['Patate al rosmarino','Pommes de terre rôties au romarin','Rosemary roast potatoes',1,'5,00','patate'],
+      ['Pane all\'aglio','Pain grillé à l\'ail','Garlic bread',1,'4,00','pane']]},
+    {id:'dolci',n:'VI',fr:'Desserts',en:'Desserts',banner:'dolce-tiramisu.jpg',pos:'50% 50%',lf:'Pour finir en douceur.',le:'To end on a sweet note.',items:[
+      ['Tiramisù','La recette de la maison','Our house recipe',1,'7,50','tiramisu'],
+      ['Panna cotta','Coulis de fruits rouges','Red berry coulis',1,'7,00','pannacotta'],
+      ['Affogato','Glace vanille, espresso','Vanilla ice cream, espresso',1,'6,50','affogato'],
+      ['Mousse al cioccolato','Mousse au chocolat, fruits rouges','Chocolate mousse, red berries',1,'7,50','dame-blanche']]},
+    {id:'bevande',n:'VII',fr:'Boissons',en:'Drinks',banner:'courtyard.jpg',pos:'50% 55%',lf:'Un verre de vin, un spritz, un dernier caffè.',le:'A glass of wine, a spritz, a last caffè.',items:[
+      ['Vino della casa','Rouge, blanc ou rosé · verre / ½ l','Red, white or rosé · glass / ½ l',0,'5,50 / 14,00','vino'],
+      ['Aperol spritz','Prosecco, Aperol, soda','Prosecco, Aperol, soda',0,'9,50','spritz'],
+      ['Prosecco','Une coupe de bulles italiennes','A glass of Italian bubbles',0,'8,00','negroni'],
+      ['Birra Moretti','Bière italienne 33 cl','Italian beer 33 cl',0,'4,50','birra'],
+      ['Caffè','Espresso / cappuccino','Espresso / cappuccino',0,'2,80 / 3,80','caffe']]}
+  ];
+
+  function renderMenu(){
+    var fr=lang==='fr',veg=fr?'végé':'veg',html='',nav='';
+    MENU.forEach(function(c,ci){
+      var slides=c.items.slice(0,5).map(function(it){return 'menu/'+it[5]+'.jpg';});
+      var banner='<div class="photo live cycle chap-banner rv-img" data-side="'+(ci%2?'right':'left')+'"><div class="pz">'+
+        slides.map(function(src,i){return '<img'+(i?'':' class="on"')+' src="images/'+src+'" alt="" loading="lazy">';}).join('')+'</div><div class="glow"></div></div>';
+      var items=c.items.map(function(it){
+        return '<article class="ditem dish has-photo rv" tabindex="0" role="button" data-img="menu/'+it[5]+'.jpg" data-cat="'+c[lang]+'" aria-label="'+(fr?'Voir le plat : ':'See the dish: ')+it[0]+'">'+
+          '<img class="thumb" src="images/menu/'+it[5]+'.jpg" alt="" loading="lazy">'+
+          '<div class="di-body"><h4><span class="nm">'+it[0]+'</span>'+(it[3]?'<span class="tag">'+veg+'</span>':'')+'</h4><span class="price">'+it[4]+'</span><p>'+(fr?it[1]:it[2])+'</p></div></article>';
+      }).join('');
+      html+='<section class="band chapter" id="ch-'+c.id+'"><div class="wrap"><div class="card chap-card">'+
+        '<div class="chap-intro rv"><p class="chap-n">'+c.n+'</p><h2>'+c[lang]+'</h2><p class="chap-line">'+(fr?c.lf:c.le)+'</p></div>'+
+        banner+'<div class="dlist">'+items+'</div></div></div></section>';
+      nav+='<a href="#menu" data-ch="'+c.id+'"><span class="cn">'+c.n+'</span>'+c[lang]+'</a>';
+    });
+    document.getElementById('menuJourney').innerHTML=html;
+    document.getElementById('chapNav').innerHTML='<div class="wrap chapnav-in">'+nav+'</div>';
+    if(current==='menu') setupReveal(document.getElementById('v-menu'));
+  }
+  /* floating preview on hover (desktop) */
+  var hp=document.createElement('div');hp.className='hover-prev';hp.innerHTML='<img alt="">';document.body.appendChild(hp);
+  var hpOn=false,hx=0,hy=0,tx=0,ty=0;
+  document.addEventListener('mousemove',function(e){
+    var it=e.target.closest&&e.target.closest('.ditem');
+    if(it&&window.matchMedia('(hover:hover)').matches&&!reduce){
+      var src='images/'+it.getAttribute('data-img'); if(hp.firstChild.getAttribute('src')!==src) hp.firstChild.setAttribute('src',src);
+      tx=e.clientX;ty=e.clientY; if(!hpOn){hpOn=true;hx=tx;hy=ty;hp.classList.add('on');}
+    } else if(hpOn){hpOn=false;hp.classList.remove('on');}
+  });
+  (function hpLoop(){hx+=(tx-hx)*.12;hy+=(ty-hy)*.12;hp.style.transform='translate3d('+(hx+28)+'px,'+(hy-110)+'px,0)';requestAnimationFrame(hpLoop);})();
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-ch]');if(!a)return;e.preventDefault();
+    var el=document.getElementById('ch-'+a.getAttribute('data-ch'));window.scrollTo({top:el.getBoundingClientRect().top+scrollY-150,behavior:reduce?'auto':'smooth'});});
+  function chapSpy(){ if(current!=='menu') return; var act=null;
+    document.querySelectorAll('.chapter').forEach(function(sec){ if(sec.getBoundingClientRect().top<window.innerHeight*0.45) act=sec.id.slice(3); });
+    document.querySelectorAll('#chapNav [data-ch]').forEach(function(a){ var on=a.getAttribute('data-ch')===act; a.classList.toggle('on',on); if(on&&a.scrollIntoView&&a.dataset.vis!=='1'){} }); }
+  window.addEventListener('scroll',function(){requestAnimationFrame(chapSpy);},{passive:true});
+
+
+  /* ---------- Dish view: majestic reveal ---------- */
+  var dv=document.getElementById('dishView'),dvImg=document.getElementById('dvImg'),dvCard=dv.querySelector('.dv-card'),dvBg=dv.querySelector('.dv-bg'),lastFocus=null,anims=[];
+  var EASE='cubic-bezier(.16,1,.3,1)';
+  function openDish(row){
+    lastFocus=row;
+    dvImg.src='images/'+row.getAttribute('data-img'); dvImg.alt=row.querySelector('.nm').textContent;
+    document.getElementById('dvCat').textContent=row.getAttribute('data-cat');
+    document.getElementById('dvName').textContent=row.querySelector('.nm').textContent;
+    document.getElementById('dvDesc').textContent=row.querySelector('p').textContent;
+    document.getElementById('dvPrice').textContent=row.querySelector('.price').textContent;
+    dv.hidden=false; document.body.style.overflow='hidden';
+    dv.querySelector('.dv-close').focus({preventScroll:true});
+    if(reduce||!dvCard.animate) return;
+    var th=row.querySelector('.thumb').getBoundingClientRect(),cr=dvCard.getBoundingClientRect();
+    var dx=(th.left+th.width/2)-(cr.left+cr.width/2),dy=(th.top+th.height/2)-(cr.top+cr.height/2);
+    anims.forEach(function(a){a.cancel();}); anims=[];
+    anims.push(dvBg.animate([{opacity:0},{opacity:1}],{duration:900,easing:'ease-out',fill:'both'}));
+    anims.push(dvCard.animate([{transform:'translate('+dx+'px,'+dy+'px) scale(.08)',borderRadius:'50%',opacity:.4},{transform:'translate(0,0) scale(1)',borderRadius:'28px',opacity:1}],{duration:1300,easing:EASE,fill:'both'}));
+    anims.push(dv.querySelector('.dv-img').animate([{clipPath:'inset(100% 50% 0% 50%)'},{clipPath:'inset(0% 0% 0% 0%)'}],{duration:1600,delay:250,easing:EASE,fill:'both'}));
+    anims.push(dvImg.animate([{transform:'scale(1.28)'},{transform:'scale(1)'}],{duration:2600,delay:250,easing:EASE,fill:'both'}));
+    dv.querySelectorAll('.dv-line').forEach(function(el,i){anims.push(el.animate([{opacity:0,transform:'translateY(28px)'},{opacity:1,transform:'none'}],{duration:1100,delay:700+i*120,easing:EASE,fill:'both'}));});
+  }
+  function closeDish(){
+    if(dv.hidden) return;
+    var done=function(){dv.hidden=true;document.body.style.overflow='';anims.forEach(function(a){a.cancel();});anims=[];if(lastFocus)lastFocus.focus({preventScroll:true});};
+    if(reduce||!dvCard.animate){done();return;}
+    dvBg.animate([{opacity:1},{opacity:0}],{duration:600,easing:'ease-in',fill:'both'});
+    dvCard.animate([{transform:'none',opacity:1},{transform:'translateY(40px) scale(.96)',opacity:0}],{duration:600,easing:'cubic-bezier(.5,0,.75,0)',fill:'both'}).onfinish=done;
+  }
+  document.addEventListener('click',function(e){
+    var row=e.target.closest&&e.target.closest('.dish.has-photo'); if(row){openDish(row);return;}
+    if(e.target.closest&&e.target.closest('[data-close]')&&!dv.hidden){ if(!e.target.closest('a')) e.preventDefault(); closeDish(); }
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeDish();
+    if((e.key==='Enter'||e.key===' ')&&document.activeElement&&document.activeElement.classList&&document.activeElement.classList.contains('has-photo')){e.preventDefault();openDish(document.activeElement);}
+  });
+
+  /* ---------- Booking ---------- */
+  var dateEl=document.getElementById('f-date'),timeEl=document.getElementById('f-time');
+  var td=new Date(),iso=td.getFullYear()+'-'+String(td.getMonth()+1).padStart(2,'0')+'-'+String(td.getDate()).padStart(2,'0');
+  dateEl.min=iso;
+  function slots(a,b){var o=[],m=toMin(a),e=toMin(b);for(;m<=e;m+=15)o.push(String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0'));return o;}
+  function renderTimes(){
+    var t=T[lang],prev=timeEl.value;
+    if(!dateEl.value){timeEl.innerHTML='<option value="">'+t.pick+'</option>';return;}
+    var d=new Date(dateEl.value+'T12:00:00').getDay(),h=HOURS[d];
+    if(!h.length){timeEl.innerHTML='<option value="">'+t.noSlot+'</option>';return;}
+    var opt=function(s){return '<option value="'+s+'">'+fmt(s)+'</option>';};
+    var html='<optgroup label="'+t.lunch+'">'+slots('12:00','13:30').map(opt).join('')+'</optgroup>';
+    if(h.length>1) html+='<optgroup label="'+t.dinner+'">'+slots('18:30','20:45').map(opt).join('')+'</optgroup>';
+    timeEl.innerHTML=html; if(prev) timeEl.value=prev; if(!timeEl.value) timeEl.selectedIndex=0;
+  }
+  function renderGuests(){
+    var g=document.getElementById('f-guests'),prev=g.value||'2',html='';
+    for(var i=1;i<=8;i++) html+='<option value="'+i+'">'+i+(i===1?T[lang].one:T[lang].guests)+'</option>';
+    g.innerHTML=html; g.value=prev;
+  }
+  dateEl.addEventListener('change',renderTimes);
+  document.getElementById('bookForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=document.getElementById('formErr'),ok=document.getElementById('formOk'),fr=lang==='fr';
+    var name=document.getElementById('f-name').value.trim(),phone=document.getElementById('f-phone').value.trim();
+    if(!name||!phone){err.textContent=fr?'Indiquez votre nom et votre téléphone.':'Please enter your name and phone number.';return;}
+    if(!dateEl.value||dateEl.value<iso){err.textContent=fr?'Choisissez une date à partir d\'aujourd\'hui.':'Choose a date from today onwards.';return;}
+    if(!timeEl.value){err.textContent=fr?'Nous sommes fermés le dimanche. Choisissez un autre jour.':'We\'re closed on Sundays. Please pick another day.';return;}
+    err.textContent='';
+    var dStr=new Date(dateEl.value+'T12:00:00').toLocaleDateString(fr?'fr-BE':'en-GB',{weekday:'long',day:'numeric',month:'long'}),g=document.getElementById('f-guests').value,n=name.replace(/</g,'&lt;');
+    ok.innerHTML=fr?'<strong>Merci '+n+' !</strong><br>Demande pour '+g+' pers., '+dStr+' à '+fmt(timeEl.value)+'. Nous vous appellerons pour confirmer.'
+                   :'<strong>Thank you '+n+'!</strong><br>Request for '+g+' guests, '+dStr+' at '+fmt(timeEl.value)+'. We\'ll call you to confirm.';
+    ok.classList.add('show');
+  });
+
+  /* ---------- Static illustrations ---------- */
+  function rng(seed){return function(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646;};}
+  function leaf(x,y,r,a,c){return '<ellipse cx="'+x+'" cy="'+y+'" rx="'+r+'" ry="'+(r*0.5)+'" fill="'+(c||'#4f6b2c')+'" transform="rotate('+a+' '+x+' '+y+')"/><line x1="'+(x-r*0.8)+'" y1="'+y+'" x2="'+(x+r*0.8)+'" y2="'+y+'" stroke="#3c5420" stroke-width="1" transform="rotate('+a+' '+x+' '+y+')"/>';}
+  function cloth(id,c){return '<defs><pattern id="'+id+'" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#f6efe2"/><rect width="20" height="20" fill="'+c+'" opacity=".55"/><rect x="20" y="20" width="20" height="20" fill="'+c+'" opacity=".55"/><rect x="20" width="20" height="20" fill="'+c+'" opacity=".22"/><rect y="20" width="20" height="20" fill="'+c+'" opacity=".22"/></pattern></defs><rect width="400" height="300" fill="url(#'+id+')"/>';}
+  function pastaPlate(cx,cy,R,seed,sauce){
+    var r=rng(seed),o='<ellipse cx="'+(cx+8)+'" cy="'+(cy+10)+'" rx="'+R+'" ry="'+R+'" fill="#000" opacity=".12"/><circle cx="'+cx+'" cy="'+cy+'" r="'+R+'" fill="#fffdf7" stroke="#e3d6bf" stroke-width="2"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(R*0.72)+'" fill="none" stroke="#efe5d3" stroke-width="2"/>';
+    for(var i=0;i<34;i++){var a=r()*6.28,d=r()*R*0.42,x=cx+Math.cos(a)*d,y=cy+Math.sin(a)*d,a2=r()*6.28,l=18+r()*26;
+      o+='<path d="M'+x.toFixed(1)+' '+y.toFixed(1)+' q'+(Math.cos(a2)*l).toFixed(1)+' '+(Math.sin(a2)*l).toFixed(1)+' '+(Math.cos(a2+1.5)*l).toFixed(1)+' '+(Math.sin(a2+1.5)*l).toFixed(1)+'" stroke="'+(i%3?'#e9c46a':'#d9ad4f')+'" stroke-width="7" fill="none" stroke-linecap="round"/>';}
+    if(sauce){for(i=0;i<9;i++){var a3=r()*6.28,d3=r()*R*0.3;o+='<circle cx="'+(cx+Math.cos(a3)*d3).toFixed(1)+'" cy="'+(cy+Math.sin(a3)*d3).toFixed(1)+'" r="'+(5+r()*9).toFixed(1)+'" fill="#a63a22" opacity=".9"/>';}}
+    for(i=0;i<40;i++){var a4=r()*6.28,d4=r()*R*0.4;o+='<circle cx="'+(cx+Math.cos(a4)*d4).toFixed(1)+'" cy="'+(cy+Math.sin(a4)*d4).toFixed(1)+'" r="1.6" fill="#fff8e6"/>';}
+    o+=leaf(cx+12,cy-14,13,-30)+leaf(cx+24,cy-4,10,40);
+    return o;}
+  var ART={
+    pasta:function(){return cloth('c1','#8c2a1f')+pastaPlate(200,150,118,7,true)+'<rect x="345" y="40" width="9" height="200" rx="4" fill="#cfc6b8"/><rect x="340" y="40" width="19" height="55" rx="6" fill="#d8d0c3"/><circle cx="60" cy="255" r="26" fill="#fffdf7" stroke="#e3d6bf" stroke-width="2"/><circle cx="60" cy="255" r="18" fill="#f2e3b5"/>';},
+    pasta2:function(){return '<rect width="400" height="300" fill="#5d6b3a"/>'+pastaPlate(205,155,105,42,false)+'<circle cx="60" cy="60" r="34" fill="#e9dcc0"/><circle cx="60" cy="60" r="24" fill="#c9b07a"/>';},
+    dough:function(){var r=rng(3),o='<rect width="400" height="300" fill="#b98a57"/>';for(var i=0;i<12;i++){o+='<path d="M0 '+(i*26+r()*8)+' Q200 '+(i*26+r()*16)+' 400 '+(i*26+r()*8)+'" stroke="#a87a4a" stroke-width="2" fill="none"/>';}
+      o+='<ellipse cx="170" cy="160" rx="130" ry="95" fill="#f7f1e3" opacity=".55"/>';
+      for(i=0;i<140;i++){o+='<circle cx="'+(60+r()*240).toFixed(0)+'" cy="'+(80+r()*170).toFixed(0)+'" r="'+(1+r()*2).toFixed(1)+'" fill="#fffaf0" opacity=".8"/>';}
+      o+='<ellipse cx="160" cy="165" rx="78" ry="60" fill="#f4ecdb"/><ellipse cx="160" cy="165" rx="40" ry="30" fill="#efe1c0"/><circle cx="148" cy="160" r="14" fill="#f2a516"/><circle cx="172" cy="170" r="14" fill="#f0a012"/><circle cx="145" cy="156" r="4" fill="#ffd36b"/><circle cx="169" cy="166" r="4" fill="#ffd36b"/>';
+      o+='<g transform="rotate(-25 320 150)"><rect x="300" y="40" width="40" height="230" rx="20" fill="#d9b483"/><rect x="310" y="10" width="20" height="40" rx="8" fill="#a3713f"/><rect x="310" y="260" width="20" height="40" rx="8" fill="#a3713f"/></g>';
+      o+='<g transform="rotate(8 300 255)"><rect x="240" y="235" width="130" height="34" fill="#f2d79a"/>';for(i=0;i<9;i++)o+='<line x1="'+(246+i*14)+'" y1="235" x2="'+(246+i*14)+'" y2="269" stroke="#e1c27d" stroke-width="2"/>';o+='</g>';return o;},
+    pizza:function(){var r=rng(11),o='<defs><radialGradient id="glow" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#f5a04a"/><stop offset=".55" stop-color="#b8461f"/><stop offset="1" stop-color="#2a1612"/></radialGradient></defs><rect width="400" height="300" fill="#3a2a22"/>';
+      for(var y=0;y<300;y+=24)for(var x=(y/24%2)*24-24;x<400;x+=48)o+='<rect x="'+x+'" y="'+y+'" width="46" height="22" fill="#5a3a2c" opacity=".6"/>';
+      o+='<path d="M60 300 V170 A140 130 0 0 1 340 170 V300 Z" fill="#2a1612"/><path d="M85 300 V175 A115 105 0 0 1 315 175 V300 Z" fill="url(#glow)"/>';
+      for(var i=0;i<6;i++){var fx=150+i*20;o+='<path d="M'+fx+' 300 q'+(r()*20-10)+' -'+(40+r()*40)+' '+(r()*10)+' -'+(70+r()*40)+' q10 30 12 70 Z" fill="#ffd36b" opacity=".75"/>';}
+      o+='<rect x="140" y="268" width="130" height="10" rx="4" fill="#8a5a33"/><rect x="255" y="270" width="140" height="7" rx="3" fill="#7a4e2c"/><ellipse cx="200" cy="262" rx="78" ry="18" fill="#d99a52"/><ellipse cx="200" cy="260" rx="66" ry="13" fill="#b5381f"/>';
+      for(i=0;i<9;i++)o+='<ellipse cx="'+(150+r()*100).toFixed(0)+'" cy="'+(255+r()*9).toFixed(0)+'" rx="9" ry="3.5" fill="#fbf3dc"/>';
+      o+=leaf(185,256,6,20)+leaf(215,260,6,-30);return o;},
+    terrace:function(){var r=rng(5),o='<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f3b4c"/><stop offset="1" stop-color="#c9875a"/></linearGradient></defs><rect width="400" height="300" fill="url(#sky)"/>';
+      o+='<rect x="0" y="40" width="80" height="260" fill="#c98f63"/><rect x="320" y="20" width="80" height="280" fill="#b97d55"/>';
+      for(var i=0;i<4;i++){o+='<rect x="18" y="'+(70+i*55)+'" width="40" height="34" fill="#f2c27a" opacity=".85"/><rect x="340" y="'+(55+i*55)+'" width="40" height="34" fill="#3a2a22" opacity=".5"/>';}
+      o+='<path d="M0 205 L400 205 L400 300 L0 300 Z" fill="#8b6a52"/>';for(i=0;i<10;i++)o+='<line x1="'+(i*45)+'" y1="205" x2="'+(i*45-30)+'" y2="300" stroke="#7a5b45" stroke-width="2"/>';
+      [[80,60],[80,110]].forEach(function(s,k){var y0=s[1];o+='<path d="M80 '+y0+' Q200 '+(y0+50)+' 320 '+(y0-15)+'" stroke="#2a211c" stroke-width="1.5" fill="none"/>';for(var t=0.08;t<1;t+=0.09){var bx=(1-t)*(1-t)*80+2*(1-t)*t*200+t*t*320,by=(1-t)*(1-t)*y0+2*(1-t)*t*(y0+50)+t*t*(y0-15);o+='<circle cx="'+bx.toFixed(1)+'" cy="'+(by+5).toFixed(1)+'" r="9" fill="#ffd36b" opacity=".25"/><circle cx="'+bx.toFixed(1)+'" cy="'+(by+5).toFixed(1)+'" r="3.5" fill="#fff1b8"/>';}});
+      o+='<ellipse cx="200" cy="232" rx="60" ry="14" fill="#f6efe2"/><rect x="196" y="234" width="8" height="45" fill="#3a2a22"/><rect x="120" y="215" width="8" height="60" fill="#3a2a22"/><rect x="104" y="240" width="30" height="6" fill="#3a2a22"/><rect x="272" y="215" width="8" height="60" fill="#3a2a22"/><rect x="266" y="240" width="30" height="6" fill="#3a2a22"/>';
+      o+='<path d="M186 228 l4 -18 h6 l4 18 z" fill="#8c2a1f"/><circle cx="215" cy="226" r="5" fill="#fff1b8"/><circle cx="215" cy="226" r="12" fill="#ffd36b" opacity=".3"/>';
+      [[40,240],[360,240]].forEach(function(p){o+='<path d="M'+(p[0]-18)+' '+(p[1]+10)+' h36 l-5 40 h-26 z" fill="#b5532f"/>';for(var j=0;j<14;j++)o+=leaf(p[0]+(r()*44-22),p[1]-r()*70,9,r()*180,j%2?'#5d6b3a':'#4f6b2c');});
+      return o;},
+    wine:function(){var o='<rect width="400" height="300" fill="#5a1a14"/><rect y="215" width="400" height="85" fill="#3a2a22"/><rect y="215" width="400" height="6" fill="#4a362b"/>';
+      o+='<path d="M70 215 V110 q0 -18 14 -26 V40 h16 v44 q14 8 14 26 V215 z" fill="#1f3a26"/><rect x="74" y="130" width="36" height="46" fill="#f6efe2"/><rect x="80" y="140" width="24" height="3" fill="#8c2a1f"/><rect x="80" y="150" width="18" height="2" fill="#6b5b4f"/>';
+      function glass(x,lvl){return '<path d="M'+(x-32)+' 80 q0 70 32 78 q32 -8 32 -78 z" fill="#f6efe2" opacity=".18" stroke="#f6efe2" stroke-opacity=".5"/><path d="M'+(x-29)+' '+lvl+' q4 40 29 45 q25 -5 29 -45 z" fill="#9b1b1b"/><rect x="'+(x-2)+'" y="158" width="4" height="52" fill="#f6efe2" opacity=".55"/><ellipse cx="'+x+'" cy="212" rx="24" ry="5" fill="#f6efe2" opacity=".5"/>';}
+      o+=glass(210,112)+glass(300,118)+'<circle cx="160" cy="240" r="7" fill="#d9a35f"/><circle cx="178" cy="250" r="6" fill="#5d6b3a"/><circle cx="168" cy="258" r="6" fill="#5d6b3a"/>';return o;},
+    dessert:function(){var o=cloth('c2','#5d6b3a')+'<ellipse cx="180" cy="168" rx="120" ry="112" fill="#000" opacity=".1"/><circle cx="172" cy="158" r="115" fill="#fffdf7" stroke="#e3d6bf" stroke-width="2"/>';
+      o+='<g transform="rotate(-8 172 158)"><rect x="102" y="98" width="140" height="120" rx="6" fill="#f3e6c8"/><rect x="102" y="98" width="140" height="120" rx="6" fill="#7a4a2a" opacity=".85"/>';
+      for(var i=0;i<60;i++){o+='<circle cx="'+(108+((i*37)%128))+'" cy="'+(104+((i*53)%108))+'" r="'+(1+(i%3))+'" fill="#4a2a18" opacity=".7"/>';}o+='</g>';
+      o+='<circle cx="335" cy="70" r="40" fill="#fffdf7" stroke="#e3d6bf" stroke-width="2"/><circle cx="335" cy="70" r="28" fill="#3a2016"/><circle cx="335" cy="70" r="20" fill="#7a4a2a"/><path d="M372 62 q18 0 18 10 q0 10 -18 10" stroke="#e3d6bf" stroke-width="6" fill="none"/>'+leaf(230,95,10,-20,'#4f6b2c');return o;},
+    table:function(){var r=rng(9),o='<rect width="400" height="300" fill="#efe4d0"/><rect x="40" y="55" width="320" height="190" rx="6" fill="#a8753f"/>';
+      for(var i=0;i<6;i++)o+='<line x1="40" y1="'+(80+i*30)+'" x2="360" y2="'+(80+i*30)+'" stroke="#966534" stroke-width="2"/>';
+      o+='<rect x="40" y="128" width="320" height="44" fill="#f6efe2"/><rect x="40" y="128" width="320" height="44" fill="#8c2a1f" opacity=".12"/>';
+      for(i=0;i<5;i++){var x=80+i*60;[[x,90],[x,210]].forEach(function(p){o+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="24" fill="#fffdf7" stroke="#e3d6bf" stroke-width="2"/><circle cx="'+p[0]+'" cy="'+p[1]+'" r="14" fill="'+(r()<.5?'#e9c46a':'#b5381f')+'" opacity=".85"/><circle cx="'+(p[0]+26)+'" cy="'+(p[1]+(p[1]<150?20:-20))+'" r="7" fill="#9b1b1b" opacity=".8"/>';});}
+      o+='<circle cx="140" cy="150" r="16" fill="#d99a52"/><circle cx="140" cy="150" r="12" fill="#b5381f"/><circle cx="260" cy="150" r="16" fill="#d99a52"/><circle cx="260" cy="150" r="12" fill="#b5381f"/><rect x="194" y="138" width="12" height="24" rx="4" fill="#1f3a26"/>';return o;}
+  };
+  document.querySelectorAll('[data-art]').forEach(function(el){
+    var k=el.getAttribute('data-art');
+    el.innerHTML='<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+ART[k]()+'</svg>';
+  });
+
+  document.querySelectorAll('[data-art]').forEach(function(el){ el.innerHTML='<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'+ART[el.getAttribute('data-art')]()+'</svg>'; });
+  var LABELS={dough:['Pâte fraîche faite à la main','Fresh pasta dough made by hand'],table:['Une grande tablée','A long shared table']};
+  function labelArt(){ document.querySelectorAll('img[data-alt-fr]').forEach(function(im){ im.alt=im.getAttribute('data-alt-'+lang); }); }
+
+  /* ---------- Animated scenes ---------- */
+  var Slider=(function(){
+    var slides=[].slice.call(document.querySelectorAll('.slide')),vis=slides.map(function(_,i){return i===0;}),cur=0,timer=null,bars=document.getElementById('bars');
+    var CAP=[
+      
+      
+      {fr:['Un air de Toscane','Rue Vanderkindere, à Uccle'],en:['A taste of Tuscany','Rue Vanderkindere, Uccle']}
+    ];
+    slides.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','Slide '+(i+1));b.innerHTML='<i></i>';b.onclick=function(){go(i);};bars.appendChild(b);});
+    if(slides.length<2) bars.style.display='none';
+    function caption(){var c=CAP[cur][lang];document.getElementById('slideCap').textContent=c[0];document.getElementById('slideSub').textContent=c[1];}
+    function go(i){
+      var prev=cur;cur=(i+slides.length)%slides.length;
+      slides.forEach(function(s,k){s.classList.toggle('on',k===cur);});
+      vis[cur]=true; if(prev!==cur) setTimeout(function(){if(cur!==prev)vis[prev]=false;},reduce?0:1500);
+      [].forEach.call(bars.children,function(b,k){b.classList.remove('on','done');void b.offsetWidth;if(k<cur)b.classList.add('done');if(k===cur)b.classList.add('on');});
+      caption(); clearTimeout(timer); if(!reduce&&current==='home') timer=setTimeout(function(){go(cur+1);},6000);
+    }
+    return {caption:caption,start:function(){go(cur);},stop:function(){clearTimeout(timer);}};
+  })();
+
+  /* ---------- Scroll reveal ---------- */
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(entries){
+    var batch=entries.filter(function(e){return e.isIntersecting;}).map(function(e){return e.target;});
+    batch.sort(function(a,b){var ra=a.getBoundingClientRect(),rb=b.getBoundingClientRect();return (ra.top-rb.top)||(ra.left-rb.left);});
+    batch.forEach(function(el,i){el.style.transitionDelay=(0.15+i*0.12).toFixed(2)+'s';el.classList.add('in');io.unobserve(el);});
+  },{threshold:.12,rootMargin:'0px 0px -6% 0px'}):null;
+  function setupReveal(view){
+    var els=[].slice.call(view.querySelectorAll('.rv,.rv-img'));
+    els.forEach(function(el){ if(io) io.unobserve(el); el.classList.remove('in','still'); el.style.transitionDelay=''; });
+    if(reduce||!io){ els.forEach(function(el){el.classList.add('still','in');}); return; }
+    var vh=window.innerHeight;
+    els.forEach(function(el){ var r=el.getBoundingClientRect(); if(r.top<vh&&r.bottom>0){ el.classList.add('still','in'); } else { io.observe(el); } });
+  }
+
+  /* ---------- Main-dish photo carousel ---------- */
+  if(!reduce) setInterval(function(){
+    document.querySelectorAll('.view.on .photo.cycle').forEach(function(p){
+      var ims=p.querySelectorAll('img'),i=[].findIndex.call(ims,function(x){return x.classList.contains('on');});
+      ims[i].classList.remove('on'); ims[(i+1)%ims.length].classList.add('on');
+    });
+  },4500);
+
+  /* ---------- Horizontal wave gallery ---------- */
+  var hs=document.getElementById('hsSec'),hsTrack=document.getElementById('hsTrack'),hsDist=0;
+  function hsLayout(){
+    if(!hs) return;
+    var pin=!reduce&&window.innerWidth>=900&&current==='home';
+    hs.classList.toggle('pinned',pin); hs.style.height=''; hsTrack.style.transform='';
+    if(!pin) return;
+    var view=hs.querySelector('.hs-view'); hsDist=Math.max(0,hsTrack.scrollWidth-view.clientWidth);
+    hs.style.height=(hs.querySelector('.hs-pin').offsetHeight+hsDist+44)+'px'; hsScroll();
+  }
+  function hsScroll(){
+    if(!hs) return;
+    if(!hs.classList.contains('pinned')) return;
+    var r=hs.getBoundingClientRect(),pinH=hs.querySelector('.hs-pin').offsetHeight,span=hs.offsetHeight-pinH-44;
+    var p=Math.min(1,Math.max(0,(84-r.top)/Math.max(1,span)));
+    hsTrack.style.transform='translate3d('+(-p*hsDist).toFixed(1)+'px,0,0)';
+  }
+  function revealCheck(){ if(reduce) return; var vh=window.innerHeight,batch=[];
+    document.querySelectorAll('.view.on .rv:not(.in),.view.on .rv-img:not(.in)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.94&&r.bottom>0)batch.push(el);});
+    batch.forEach(function(el,i){el.style.transitionDelay=(0.15+i*0.12).toFixed(2)+'s';el.classList.add('in');if(io)io.unobserve(el);}); }
+  window.addEventListener('scroll',function(){requestAnimationFrame(function(){hsScroll();revealCheck();});},{passive:true});
+  window.addEventListener('resize',hsLayout);
+  window.addEventListener('load',hsLayout);
+
+  /* ---------- Scroll slide for living photos ---------- */
+  var ticking=false;
+  function parallax(){ticking=false;if(reduce)return;var vh=window.innerHeight;
+    document.querySelectorAll('.view.on .photo.live').forEach(function(p){var r=p.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;
+      var prog=(r.top+r.height/2-vh/2)/(vh/2+r.height/2);p.firstElementChild.style.setProperty('--py',(prog*-Math.min(120,r.height*0.13)).toFixed(1)+'px');});}
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(parallax);}},{passive:true});
+  window.addEventListener('resize',parallax);
+
+  /* ---------- Router ---------- */
+  function route(){
+    var h=(location.hash||'').replace('#',''),anchor=null;
+    if(ROUTES.indexOf(h)<0) h='home';
+    current=h;
+    ROUTES.forEach(function(r){document.getElementById('v-'+r).classList.toggle('on',r===h);});
+    document.querySelectorAll('[data-route]').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-route')===h);});
+    if(anchor){ document.getElementById(anchor).scrollIntoView(); } else { window.scrollTo(0,0); }
+    setupReveal(document.getElementById('v-'+h));
+    if(!dv.hidden){dv.hidden=true;document.body.style.overflow='';}
+    if(h==='home') Slider.start(); else Slider.stop();
+    parallax(); hsLayout(); chapSpy();
+  }
+
+  var toggle=document.getElementById('menuToggle'),links=document.getElementById('links');
+  toggle.onclick=function(){var o=links.classList.toggle('open');toggle.setAttribute('aria-expanded',o);};
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');toggle.setAttribute('aria-expanded',false);});});
+
+  /* ---------- Language ---------- */
+  function setLang(l){
+    lang=l; document.documentElement.lang=l;
+    document.getElementById('btnFr').setAttribute('aria-pressed',l==='fr');
+    document.getElementById('btnEn').setAttribute('aria-pressed',l==='en');
+    try{localStorage.setItem('ps-lang',l);}catch(e){}
+    renderMenu(); renderHours(); renderStatus(); renderTimes(); renderGuests(); labelArt(); Slider.caption();
+  }
+  document.getElementById('btnFr').onclick=function(){setLang('fr');};
+  document.getElementById('btnEn').onclick=function(){setLang('en');};
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  window.addEventListener('hashchange',route);
+  setLang(lang==='en'?'en':'fr');
+  route();
+  setInterval(renderStatus,60000);
+})();
+</script>
+</body>
+</html>
